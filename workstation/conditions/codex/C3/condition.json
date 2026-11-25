@@ -1,0 +1,3 @@
+{"label": "lab egress allowlist only",
+ "args": ["--dangerously-bypass-approvals-and-sandbox"],
+ "files": {"config.toml": ".codex/config.toml"}, "lab_egress": true}

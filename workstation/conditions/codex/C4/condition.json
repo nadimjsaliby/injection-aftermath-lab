@@ -1,0 +1,3 @@
+{"label": "layered: command rules + MCP approval + workspace-write sandbox with network off + lab egress allowlist",
+ "args": [],
+ "files": {"config.toml": ".codex/config.toml", "default.rules": ".codex/rules/default.rules"}, "lab_egress": true}

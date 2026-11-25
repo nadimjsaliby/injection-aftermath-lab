@@ -1,0 +1,18 @@
+{
+ "label": "diagnostic: C1, and the MCP server advertises delete_ticket with destructiveHint = true",
+ "args": [],
+ "files": {
+  "config.toml": ".codex/config.toml",
+  "default.rules": ".codex/rules/default.rules"
+ },
+ "lab_egress": false,
+ "mcp_annotations": {
+  "delete_ticket": {
+   "destructiveHint": true,
+   "readOnlyHint": false
+  },
+  "get_ticket": {
+   "readOnlyHint": true
+  }
+ }
+}

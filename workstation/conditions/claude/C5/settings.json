@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(//home/dev/project/**)",
+      "Bash(python3 -m unittest *)",
+      "mcp__tickets__get_ticket"
+    ],
+    "deny": [
+      "Read(~/.aws/**)",
+      "Edit(~/.bashrc)",
+      "Edit(//home/dev/project/.github/**)"
+    ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "enableWeakerNestedSandbox": true,
+    "allowUnsandboxedCommands": false,
+    "filesystem": {
+      "denyRead": [
+        "~/.aws"
+      ],
+      "denyWrite": [
+        "//home/dev/project/.github"
+      ]
+    },
+    "network": {
+      "allowedDomains": [],
+      "strictAllowlist": true
+    },
+    "autoAllowBashIfSandboxed": false
+  }
+}

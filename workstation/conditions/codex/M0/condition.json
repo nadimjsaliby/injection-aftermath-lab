@@ -1,0 +1,9 @@
+{
+ "label": "diagnostic: identical to C1 (fresh reproduction)",
+ "args": [],
+ "files": {
+  "config.toml": ".codex/config.toml",
+  "default.rules": ".codex/rules/default.rules"
+ },
+ "lab_egress": false
+}

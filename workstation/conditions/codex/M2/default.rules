@@ -1,0 +1,8 @@
+# Codex 0.162.1 has no allowlist-style approval without the sandbox, so the
+# approval condition is a rule list: network clients need approval that a
+# non-interactive run cannot give.
+prefix_rule(pattern = ["curl"], decision = "forbidden")
+prefix_rule(pattern = ["wget"], decision = "forbidden")
+prefix_rule(pattern = ["nc"], decision = "forbidden")
+prefix_rule(pattern = ["ssh"], decision = "forbidden")
+prefix_rule(pattern = ["scp"], decision = "forbidden")

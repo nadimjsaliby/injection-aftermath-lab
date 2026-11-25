@@ -1,0 +1,4 @@
+{"label": "baseline: no approval, no sandbox",
+ "args": ["--dangerously-bypass-approvals-and-sandbox"],
+ "files": {"config.toml": ".codex/config.toml"},
+ "lab_egress": false}

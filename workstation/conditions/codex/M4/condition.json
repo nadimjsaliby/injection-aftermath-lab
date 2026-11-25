@@ -1,0 +1,9 @@
+{
+ "label": "diagnostic: C1 plus disabled_tools = [\"delete_ticket\"]",
+ "args": [],
+ "files": {
+  "config.toml": ".codex/config.toml",
+  "default.rules": ".codex/rules/default.rules"
+ },
+ "lab_egress": false
+}

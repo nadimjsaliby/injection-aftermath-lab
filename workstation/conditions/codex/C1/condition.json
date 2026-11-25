@@ -1,0 +1,3 @@
+{"label": "tool approval: command rules for network clients plus per-tool MCP approval, nobody present to approve",
+ "args": [],
+ "files": {"config.toml": ".codex/config.toml", "default.rules": ".codex/rules/default.rules"}, "lab_egress": false}

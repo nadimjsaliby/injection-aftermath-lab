@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(~/.aws/**)",
+      "Edit(~/.bashrc)",
+      "Edit(//home/dev/project/.github/**)"
+    ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "enableWeakerNestedSandbox": true,
+    "allowUnsandboxedCommands": false,
+    "filesystem": {
+      "denyRead": ["~/.aws"],
+      "denyWrite": ["//home/dev/project/.github"]
+    }
+  }
+}

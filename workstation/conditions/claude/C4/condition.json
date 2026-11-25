@@ -1,0 +1,2 @@
+{"label": "layered: allowlist approval + sandbox with strict network allowlist + path deny rules + lab egress allowlist",
+ "args": ["--permission-mode", "default"], "files": {"../../../mcp-claude.json": ".mcp-lab.json", "settings.json": ".claude/settings.json"}, "lab_egress": true}

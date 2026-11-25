@@ -1,0 +1,4 @@
+{
+  "argv_prefix": ["codex", "exec", "--json"],
+  "env": {"LAB_API_KEY": "lab-not-a-real-key"}
+}

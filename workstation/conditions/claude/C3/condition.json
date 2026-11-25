@@ -1,0 +1,4 @@
+{"label": "lab egress allowlist only",
+ "args": ["--dangerously-skip-permissions"],
+ "files": {"../../../mcp-claude.json": ".mcp-lab.json", "settings.json": ".claude/settings.json"},
+ "lab_egress": true}

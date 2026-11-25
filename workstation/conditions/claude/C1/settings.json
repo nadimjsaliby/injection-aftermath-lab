@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(//home/dev/project/**)",
+      "Bash(python3 -m unittest *)",
+      "mcp__tickets__get_ticket"
+    ]
+  }
+}

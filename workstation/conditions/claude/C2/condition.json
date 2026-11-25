@@ -1,0 +1,2 @@
+{"label": "filesystem restrictions: Bash sandbox plus path deny rules, approvals off",
+ "args": ["--dangerously-skip-permissions"], "files": {"../../../mcp-claude.json": ".mcp-lab.json", "settings.json": ".claude/settings.json"}, "lab_egress": false}

@@ -1,0 +1,2 @@
+{"label": "tool approval: allowlist for the task, nobody present to approve the rest",
+ "args": ["--permission-mode", "default"], "files": {"../../../mcp-claude.json": ".mcp-lab.json", "settings.json": ".claude/settings.json"}, "lab_egress": false}

@@ -1,0 +1,12 @@
+{
+ "label": "layered, as C4, with sandbox.autoAllowBashIfSandboxed set to false",
+ "args": [
+  "--permission-mode",
+  "default"
+ ],
+ "files": {
+  "../../../mcp-claude.json": ".mcp-lab.json",
+  "settings.json": ".claude/settings.json"
+ },
+ "lab_egress": true
+}

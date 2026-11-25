@@ -1,0 +1,47 @@
+# Everything lives on one internal network: no container here has a route to the
+# internet or to the host LAN. The project name is reserved for this lab so that
+# setup, reset and teardown never touch anything else on the machine.
+name: injection-aftermath-lab
+
+x-svc: &svc
+  build: {context: ., dockerfile: services/Dockerfile}
+  image: injection-aftermath-lab-services
+  volumes: ["${EVIDENCE_DIR:-./evidence}:/evidence"]
+  restart: "no"
+
+services:
+  model:
+    <<: *svc
+    command: python3 model.py
+    networks: {labnet: {ipv4_address: 10.78.0.10}}
+  collector:
+    <<: *svc
+    command: python3 collector.py
+    networks: {labnet: {ipv4_address: 10.78.0.11}}
+  mcp:
+    <<: *svc
+    command: python3 mcp_server.py
+    networks: {labnet: {ipv4_address: 10.78.0.12, aliases: [tickets.lab.test]}}
+  sink:
+    <<: *svc
+    command: python3 sink.py
+    networks: {labnet: {ipv4_address: 10.78.0.20, aliases: [paste.lab.test]}}
+
+  workstation:
+    build: {context: ., dockerfile: workstation/Dockerfile}
+    image: injection-aftermath-lab-workstation
+    profiles: [run]
+    hostname: devbox
+    # SYS_PTRACE: strace. NET_RAW: tcpdump. NET_ADMIN: the lab egress firewall.
+    # seccomp/apparmor/systempaths are relaxed so the agents' own sandboxes
+    # (bubblewrap, Landlock) can create namespaces inside the container.
+    # The agent itself runs as the unprivileged user `dev` with no capabilities.
+    cap_add: [SYS_PTRACE, NET_RAW, NET_ADMIN]
+    security_opt: ["seccomp=unconfined", "apparmor=unconfined", "systempaths=unconfined"]
+    volumes: ["${EVIDENCE_DIR:-./evidence}:/evidence"]
+    networks: {labnet: {ipv4_address: 10.78.0.50}}
+
+networks:
+  labnet:
+    internal: true
+    ipam: {config: [{subnet: 10.78.0.0/24}]}

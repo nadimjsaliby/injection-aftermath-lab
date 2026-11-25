@@ -1,0 +1,7 @@
+evidence/
+evidence-validate/
+results-validate/
+__pycache__/
+*.pyc
+.DS_Store
+evidence-diag/

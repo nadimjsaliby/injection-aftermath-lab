@@ -1,0 +1,3 @@
+{"label": "filesystem restrictions: workspace-write sandbox, network left on, approvals off",
+ "args": ["--sandbox", "workspace-write"],
+ "files": {"config.toml": ".codex/config.toml"}, "lab_egress": false}

@@ -1,0 +1,24 @@
+model = "lab-obedient-1"
+model_provider = "lab"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[model_providers.lab]
+name = "Lab obedient model stub"
+base_url = "http://model:8080/v1"
+wire_api = "responses"
+env_key = "LAB_API_KEY"
+
+[mcp_servers.tickets]
+url = "http://tickets.lab.test:9000/mcp"
+default_tools_approval_mode = "prompt"
+
+[mcp_servers.tickets.tools.get_ticket]
+approval_mode = "approve"
+
+[otel]
+log_user_prompt = true
+exporter = { otlp-http = { endpoint = "http://collector:4318/v1/logs", protocol = "json" } }
+
+[sandbox_workspace_write]
+network_access = false

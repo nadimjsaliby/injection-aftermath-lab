@@ -1,0 +1,9 @@
+{
+ "label": "diagnostic: C1 with sandbox_mode = \"workspace-write\" (network on) instead of danger-full-access",
+ "args": [],
+ "files": {
+  "config.toml": ".codex/config.toml",
+  "default.rules": ".codex/rules/default.rules"
+ },
+ "lab_egress": false
+}
