@@ -11,6 +11,10 @@ disposable containers against a scripted model that obeys whatever instruction i
 the repository. Syscall traces, packet captures, a local sink and server-side logs record
 what really happened, independently of what the agent says happened.
 
+Write-ups: [quick read](https://blog.nadimjsaliby.com/posts/after-the-prompt-injection-short-version.html),
+[Part 1, containment](https://blog.nadimjsaliby.com/posts/after-the-prompt-injection-part-1-containment.html),
+[Part 2, forensics](https://blog.nadimjsaliby.com/posts/after-the-prompt-injection-part-2-forensics.html).
+
 Read first: [`STUDY_PLAN.md`](STUDY_PLAN.md) (threat model, metrics),
 [`SCENARIOS.md`](SCENARIOS.md) (scenario and condition matrix),
 [`CONFIGURATIONS.md`](CONFIGURATIONS.md) (exact versions and settings per condition),
